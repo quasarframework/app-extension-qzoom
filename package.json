@@ -33,7 +33,6 @@
     "eslint-plugin-vue": "^5.2.3"
   },
   "dependencies": {
-    "classlist-polyfill": "^1.2.0",
     "quasar-mixin-colorize": "^1.0.0-alpha.6"
   }
 }
