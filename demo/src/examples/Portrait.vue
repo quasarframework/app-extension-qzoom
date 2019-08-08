@@ -30,6 +30,7 @@
   height auto
   max-width 100%
   max-height 100%
+  margin auto
 
 .placeholder
   font-family sans-serif

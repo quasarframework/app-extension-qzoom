@@ -1,12 +1,15 @@
 <template>
-  <div>
+  <div >
     <figure>
       <q-zoom
         background-color="blue-grey-1"
+        scale
+        :initial-scale="5"
+        no-wheel-scale
       >
         <img
           src="https://cdn.quasar.dev/img/mountains.jpg"
-          alt="QZoom basic"
+          alt="QZoom with scale"
           class="my-image"
         >
       </q-zoom>

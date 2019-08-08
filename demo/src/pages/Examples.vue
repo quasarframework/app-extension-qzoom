@@ -4,10 +4,10 @@
       <q-markdown>
 **QZoom** is a utility component to make whatever is in its slotted content able to be zoomed to fullscreen size of the viewport.
 
-There is also the ability, once zoomed, to change the `scale` or `text-scale` of the slotted content via the mouse wheel.
+There is also the ability, once zoomed, to change the `scale` or `scale-text` of the slotted content via the mouse wheel.
 
 ::: warning
-Using both the `scale` and `text-scale` at the same time invalidates both properties.
+Using both the `scale` and `scale-text` properties at the same time invalidates both properties.
 :::
       </q-markdown>
       <example-card title="Basic" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
@@ -44,13 +44,37 @@ Normally, when content is Zoomed with QZoom, the scrollbars are turned off. If y
 
       <example-card title="Scale" name="Scale" :tag-parts="getTagParts(require('!!raw-loader!../examples/Scale.vue').default)">
       <q-markdown>
-When the `scale` property is turned on you can use the mouse wheel to zoom in and out of the content.
+When the `scale` property is turned on you can use the mouse wheel to zoom in and out of the content. Typically you would only want to use this with images.
+      </q-markdown>
+      </example-card>
+
+      <example-card title="Initial Scale" name="InitialScale" :tag-parts="getTagParts(require('!!raw-loader!../examples/InitialScale.vue').default)">
+      <q-markdown>
+You can use the property `initial-scale` when `scale` is true, to set the scaling for the content. This is a number and needs to be between 0.05 and 10.
+      </q-markdown>
+      </example-card>
+
+      <example-card title="Initial Scale Restricted" name="InitialScaleNoScale" :tag-parts="getTagParts(require('!!raw-loader!../examples/InitialScaleNoScale.vue').default)">
+      <q-markdown>
+If you use the property `no-wheel-scale` with the above example, you can restrict the ability for the user to scale.
       </q-markdown>
       </example-card>
 
       <example-card title="Scale Text" name="ScaleText" :tag-parts="getTagParts(require('!!raw-loader!../examples/ScaleText.vue').default)">
       <q-markdown>
 If your content is text-based in nature, you can provide the `scale-text` property. Using the mouse wheel will increase/decrease the font size.
+      </q-markdown>
+      </example-card>
+
+      <example-card title="Initial Scale Text" name="InitialScaleText" :tag-parts="getTagParts(require('!!raw-loader!../examples/InitialScaleText.vue').default)">
+      <q-markdown>
+You can use the property `initial-scale-text` when `scale-text` is true, to set the scaling for text. This is a percentage and needs to be between 50 and 500.
+      </q-markdown>
+      </example-card>
+
+      <example-card title="Initial Scale Text Restricted" name="InitialScaleTextNoScale" :tag-parts="getTagParts(require('!!raw-loader!../examples/InitialScaleTextNoScale.vue').default)">
+      <q-markdown>
+If you use the property `no-wheel-scale` with the above example, you can restrict the ability for the user to scale.
       </q-markdown>
       </example-card>
 
@@ -113,7 +137,11 @@ export default {
     this.addToToc('Content')
     this.addToToc('Restore on Scroll')
     this.addToToc('Scale')
+    this.addToToc('Initial Scale')
+    this.addToToc('Initial Scale Restricted')
     this.addToToc('Scale Text')
+    this.addToToc('Initial Scale Text')
+    this.addToToc('Initial Scale Text Restricted')
     this.addToToc('Manual')
 
     this.toc = this.tempToc

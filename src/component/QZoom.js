@@ -1,8 +1,5 @@
 import Vue from 'vue'
 
-// Polyfills
-import 'classlist-polyfill'
-
 // Styles
 import './zoom.styl'
 
@@ -25,7 +22,17 @@ export default function (ssrContext) {
       restoreOnScroll: Boolean,
       manual: Boolean,
       scale: Boolean,
+      initialScale: {
+        type: Number,
+        default: 1.0,
+        validator: v => v >= 0.05 && v <= 10
+      },
       scaleText: Boolean,
+      initialScaleText: {
+        type: Number,
+        default: 100,
+        validator: v => v >= 50 && v <= 500
+      },
       noCenter: Boolean,
       noWheelScale: Boolean
     },
@@ -83,6 +90,13 @@ export default function (ssrContext) {
           if (this.restoreOnScroll !== true) {
             this.addClass(document.body, 'q-zoom__no-scroll')
           }
+          // adjust initial scaling
+          if (this.scale === true && this.scaleText !== true) {
+            this.setScale(this.initialScale)
+          }
+          if (this.scaleText === true && this.scale !== true) {
+            this.setScaleText(this.initialScaleText)
+          }
           this.$emit('zoomed')
         }, 500)
       },
@@ -92,6 +106,10 @@ export default function (ssrContext) {
         this.restoring = true
         this.zoomed = false
         this.zooming = false
+
+        // reset scaling
+        this.setScale(1.0)
+        this.setScaleText(100)
 
         this.position = this.getPosition()
         setTimeout(() => {
@@ -110,6 +128,7 @@ export default function (ssrContext) {
       },
 
       setScale (val) {
+        if (val === this.scaleValue) return
         if (val >= 0.05 && val <= 10) {
           this.scaleValue = val
           this.$emit('scale', this.scaleValue)
@@ -117,6 +136,7 @@ export default function (ssrContext) {
       },
 
       setScaleText (val) {
+        if (val === this.scaleTextValue) return
         if (val >= 50 && val <= 500) {
           this.scaleTextValue = val
           this.$emit('scale-text', this.scaleTextValue)

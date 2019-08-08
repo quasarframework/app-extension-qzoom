@@ -18,4 +18,7 @@
 .my-image
   width 100%
   height auto
+  max-width 100%
+  max-height 100%
+  margin auto
 </style>

@@ -80,7 +80,11 @@ export default {
     Content: () => import('../examples/Content'),
     RestoreOnScroll: () => import('../examples/RestoreOnScroll'),
     Scale: () => import('../examples/Scale'),
+    InitialScale: () => import('../examples/InitialScale'),
+    InitialScaleNoScale: () => import('../examples/InitialScaleNoScale'),
     ScaleText: () => import('../examples/ScaleText'),
+    InitialScaleText: () => import('../examples/InitialScaleText'),
+    InitialScaleTextNoScale: () => import('../examples/InitialScaleTextNoScale'),
     Manual: () => import('../examples/Manual')
   },
 
