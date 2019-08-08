@@ -1,0 +1,9 @@
+{
+  "qautomate": {
+    "quasarConfFixMode": "automatic",
+    "sort": true
+  },
+  "@quasar/qzoom": {},
+  "@quasar/qribbon": {},
+  "@quasar/qmarkdown": {}
+}
