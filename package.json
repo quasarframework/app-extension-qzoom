@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-qzoom",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Image interactions for your Quasar App",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
   "license": "MIT",
