@@ -80,7 +80,7 @@ module.exports = function (ctx) {
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
-      publicPath: 'app-extension-qwindow',
+      publicPath: 'app-extension-qzoom',
       // vueCompiler: true,
       // gzip: true,
       // analyze: true,
@@ -105,7 +105,7 @@ module.exports = function (ctx) {
       watchOptions: {
         ignored: [
           'node_modules',
-          '!node_modules/@quasar/quasar-app-extension-qwindow'
+          '!node_modules/@quasar/quasar-app-extension-qzoom'
         ]
       }
     },
