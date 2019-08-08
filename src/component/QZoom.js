@@ -34,7 +34,8 @@ export default function (ssrContext) {
         validator: v => v >= 50 && v <= 500
       },
       noCenter: Boolean,
-      noWheelScale: Boolean
+      noWheelScale: Boolean,
+      noEscKey: Boolean
     },
 
     data () {
@@ -52,13 +53,15 @@ export default function (ssrContext) {
     },
 
     mounted () {
-      // add scroll handler
-      document.addEventListener('scroll', this.onScroll, { passive: true })
+      // add handlers
+      document.addEventListener('scroll', this.onScroll)
+      document.addEventListener('keyup', this.onKeyup)
     },
 
     beforeDestroy () {
-      // remove scroll handler
-      document.removeEventListener('scroll', this.onScroll, { passive: true })
+      // remove handlers
+      document.removeEventListener('scroll', this.onScroll)
+      document.removeEventListener('keyup', this.onKeyup)
     },
 
     computed: {
@@ -147,6 +150,17 @@ export default function (ssrContext) {
         if (this.isZoomed === true && this.restoreOnScroll === true) {
           this.hide()
           e.preventDefault()
+        }
+      },
+
+      onKeyup (e) {
+        if (e.key === 'Escape') {
+          if (this.noEscKey !== true) {
+            if (this.isZoomed) {
+              this.hide()
+              e.preventDefault()
+            }
+          }
         }
       },
 

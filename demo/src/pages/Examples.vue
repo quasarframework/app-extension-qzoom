@@ -9,6 +9,10 @@ There is also the ability, once zoomed, to change the `scale` or `scale-text` of
 ::: warning
 Using both the `scale` and `scale-text` properties at the same time invalidates both properties.
 :::
+
+::: tip
+You can use the ESC key to restore zoomed content, unless the `no-esc-key` property is set to true.
+:::
       </q-markdown>
       <example-card title="Basic" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
 
@@ -80,10 +84,10 @@ If you use the property `no-wheel-scale` with the above example, you can restric
 
       <example-card title="Manual" name="Manual" :tag-parts="getTagParts(require('!!raw-loader!../examples/Manual.vue').default)">
       <q-markdown>
-When the property `manual` is set, then the automatic nature of QZoom is gone and everything must be done programmatically.
+When the property `manual` is set, then the automatic nature of QZoom is gone and everything must be done programmatically. However, you can still use the ESC key to restore the content.
 
 ::: tip
-Click the `ZOOM` button to begin the zoom, and press the **ESC** key to restore.
+Click the `ZOOM` button to begin the zoom.
 :::
 
 ::: tip

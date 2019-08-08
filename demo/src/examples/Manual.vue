@@ -94,23 +94,9 @@ export default {
       drawerRight: false
     }
   },
-  mounted () {
-    document.addEventListener('keyup', this.onKeyup)
-  },
-  beforeDestroy () {
-    document.removeEventListener('keyup', this.onKeyup)
-  },
   methods: {
     menuClicked () {
       this.$refs.zoom.show()
-    },
-    onKeyup (e) {
-      if (e.key === 'Escape') {
-        if (this.$refs.zoom.isZoomed) {
-          this.$refs.zoom.hide()
-          e.preventDefault()
-        }
-      }
     }
   }
 }
