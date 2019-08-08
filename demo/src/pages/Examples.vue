@@ -11,7 +11,7 @@ Using both the `scale` and `scale-text` properties at the same time invalidates 
 :::
 
 ::: tip
-You can use the ESC key to restore zoomed content, unless the `no-esc-key` property is set to true.
+You can use the ESC key to restore zoomed content, unless the `no-esc-close` property is set to true.
 :::
       </q-markdown>
       <example-card title="Basic" name="Basic" :tag-parts="getTagParts(require('!!raw-loader!../examples/Basic.vue').default)" />
