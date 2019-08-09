@@ -21,7 +21,7 @@ const extendConf = function (conf) {
   // conf.framework.directives.push('Scroll')
 
   // make sure qzoom css goes through webpack to avoid ssr issues
-  conf.css.push('~quasar/quasar-app-extension-qzoom/src/component/zoom.styl')
+  conf.css.push('~@quasar/quasar-app-extension-qzoom/src/component/zoom.styl')
   console.log(` App Extension (qzoom) Info: 'Adding zoom.styl css reference to your quasar.conf.js'`)
 }
 
