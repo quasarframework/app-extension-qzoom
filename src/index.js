@@ -7,7 +7,7 @@
 
 const extendConf = function (conf) {
   // make sure qzoom boot file is registered
-  conf.boot.push('~quasar-app-extension-qzoom/src/boot/qzoom.js')
+  conf.boot.push('~@quasar/quasar-app-extension-qzoom/src/boot/qzoom.js')
   console.log(` App Extension (qzoom) Info: 'Adding qzoom boot reference to your quasar.conf.js'`)
 
   // make sure boot & component files transpile
@@ -21,7 +21,7 @@ const extendConf = function (conf) {
   // conf.framework.directives.push('Scroll')
 
   // make sure qzoom css goes through webpack to avoid ssr issues
-  conf.css.push('~quasar-app-extension-qzoom/src/component/zoom.styl')
+  conf.css.push('~@quasar/quasar-app-extension-qzoom/src/component/zoom.styl')
   console.log(` App Extension (qzoom) Info: 'Adding zoom.styl css reference to your quasar.conf.js'`)
 }
 

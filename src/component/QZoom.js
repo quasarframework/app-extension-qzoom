@@ -35,7 +35,7 @@ export default function (ssrContext) {
       },
       noCenter: Boolean,
       noWheelScale: Boolean,
-      noEscKey: Boolean
+      noEscClose: Boolean
     },
 
     data () {
@@ -155,7 +155,7 @@ export default function (ssrContext) {
 
       onKeyup (e) {
         if (e.key === 'Escape') {
-          if (this.noEscKey !== true) {
+          if (this.noEscClose !== true) {
             if (this.isZoomed) {
               this.hide()
               e.preventDefault()
