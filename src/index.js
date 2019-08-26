@@ -13,6 +13,9 @@ const extendConf = function (conf) {
   // make sure boot & component files transpile
   conf.build.transpileDependencies.push(/quasar-app-extension-qzoom[\\/]src/)
 
+  // qzoom is dependent on colorize mixin
+  conf.build.transpileDependencies.push(/quasar-mixin-colorize[\\/]src/)
+
   // make sure these plugins are in the build
   // conf.framework.plugins.push('AppFullscreen')
   // conf.framework.plugins.push('Platform')
@@ -22,6 +25,7 @@ const extendConf = function (conf) {
 
   // make sure qzoom css goes through webpack to avoid ssr issues
   conf.css.push('~@quasar/quasar-app-extension-qzoom/src/component/zoom.styl')
+  conf.css.push('~quasar-mixin-colorize/src/qColors.styl')
   console.log(` App Extension (qzoom) Info: 'Adding zoom.styl css reference to your quasar.conf.js'`)
 }
 
