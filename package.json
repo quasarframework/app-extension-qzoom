@@ -1,6 +1,6 @@
 {
   "name": "@quasar/quasar-app-extension-qzoom",
-  "version": "1.0.0-alpha.4",
+  "version": "1.0.0-alpha.5",
   "description": "Image interactions for your Quasar App",
   "author": "Jeff Galbraith <jeff@quasar.dev>",
   "license": "MIT",
@@ -26,13 +26,13 @@
     "yarn": ">= 1.6.0"
   },
   "devDependencies": {
-    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/eslint-config-standard": "^5.0.1",
     "babel-eslint": "^10.0.3",
-    "eslint": "^6.2.2",
-    "eslint-loader": "^3.0.0",
-    "eslint-plugin-vue": "^5.2.3"
+    "eslint": "^6.7.2",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-vue": "^6.0.1"
   },
   "dependencies": {
-    "quasar-mixin-colorize": "^1.0.0-alpha.6"
+    "q-colorize-mixin": "^1.0.5"
   }
 }
