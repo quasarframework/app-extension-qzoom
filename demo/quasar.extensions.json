@@ -1,9 +1,8 @@
 {
-  "qautomate": {
-    "quasarConfFixMode": "automatic",
-    "sort": true
-  },
   "@quasar/qzoom": {},
   "@quasar/qribbon": {},
-  "@quasar/qmarkdown": {}
+  "@quasar/qmarkdown": {
+    "import_md": true,
+    "import_vmd": true
+  }
 }
