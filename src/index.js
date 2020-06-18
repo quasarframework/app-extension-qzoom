@@ -28,7 +28,7 @@ const extendConf = function (conf) {
 module.exports = function (api) {
   // quasar compatibility check
   api.compatibleWith('quasar', '^1.5.0')
-  api.compatibleWith('@quasar/app', '^1.1.0')
+  api.compatibleWith('@quasar/app', '^1.1.0 || ^2.0.0')
 
   // register JSON api
   // api.registerDescribeApi('QZoom', './component/QZoom.json')
